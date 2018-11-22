@@ -1,0 +1,49 @@
+body{
+  background-color: #cdc
+}
+
+.left_cont{
+  margin-top: 30px;
+  background-color: white;
+  padding: 10px;
+}
+
+
+.form-control{
+  float: left;
+}
+
+.row{
+  margin-top: 30px;
+  background-color: white;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 0px;
+  box-sizing: border-box;
+}
+
+.w100{
+  max-width: 100%;
+}
+
+.wd100{
+  width: 100%;
+}
+
+.avatar{
+  border-radius: 50%;
+}
+
+.imgt{
+  border-radius: 5%;
+  float: left;
+}
+
+.heart{
+  padding-top: 20px;
+}
+
+.counter{
+  padding-top: 20px;
+}

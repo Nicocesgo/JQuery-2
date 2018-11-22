@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jquery2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="col-md-6 left">
+        <div class="left_cont col-md-12">
+            <div class="col-md-2">
+                <img class="w100 avatar" src="assets/img/p7.png" alt="avatar">
+            </div>
+            <div class="col-md-10">
+                <textarea id=formulario class="form-control" rows="3" placeholder="¿Qué piensas?"></textarea>
+            </div>
+            <div class="left_cont col-md-offset-8 col-md-4">
+              <button id=boton_publicar type="button" class="btn btn-default btn-lg btn-block">Publicar</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6 prueba"></div>
+
+
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+    const generateRow = function(twt) {
+      return '<div class="row col-md-12">'+
+          '<img class="avatar col-md-2" src="assets/img/p3.png" alt="avatar">'+
+          '<div class="col-md-9">'+
+            '  <p><strong>Lalo Landa</strong></p>'+
+              '<p>'+twt+'</p>'+
+          '</div>'+
+          '<div class="col-md-1">'+
+              '<i class="fas fa-times"></i>'+
+          '</div>'+
+          '<img class="w100 imgt col-md-offset-2 col-md-9" src="https://hosh.cl/wp-content/uploads/2018/06/valparaiso-2-500x500.jpg" alt="valpo">'+
+          '<div class=col-md-12>'+
+              '<i class="far fa-heart heart col-md-offset-2 col-md-1"></i>'+
+              '<span class="counter col-md-9">0<span>'+
+          '</div>'+
+      '</div>'
+    };
+    
+    $(function(){
+        $('#boton_publicar').on('click', function(){
+          var twt = $('#formulario').val();
+          $('.prueba').append(generateRow(twt))
+        })
+
+        $('.heart').on('click', function(){
+            var a = parseInt($(".counter").text());
+            var b = a + 1;
+            $(".counter").text(b);
+        })
+
+        })
+    </script>
+</body>
+
+</html>
